@@ -1,0 +1,52 @@
+name: Build LaTeX PDFs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+  workflow_dispatch:          # enables "Run workflow" button in UI
+    inputs:
+      target:
+        description: 'Which tex file or year to build (default: 2025-26)'
+        required: false
+        default: '2025-26'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up TeX Live
+      uses: xu-cheng/latex-action@v2
+      with:
+        # add extra packages if needed
+        extra_packages: latexmk
+
+    - name: Select build target
+      id: vars
+      run: |
+        if [ -n "${{ github.event.inputs.target }}" ]; then
+          echo "target=${{ github.event.inputs.target }}" >> $GITHUB_OUTPUT
+        else
+          echo "target=2025-26" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Compile LaTeX files
+      run: |
+        echo "Building files under: ${{ steps.vars.outputs.target }}"
+        find "${{ steps.vars.outputs.target }}" -name '*.tex' | while read f; do
+          echo "Compiling $f..."
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir="$(dirname "$f")" "$f"
+        done
+
+    - name: Upload PDFs as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: built-pdfs
+        path: |
+          **/*.pdf
