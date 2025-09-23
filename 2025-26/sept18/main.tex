@@ -36,17 +36,17 @@
 
 \begin{document}
 
-\begin{frame}[plain]
+\begin{frame}[t]
   \titlepage
 \end{frame}
 
-\begin{frame}[plain]{Contents}
+\begin{frame}[t]{Contents}
   \tableofcontents
 \end{frame}
 
 \section{Polynomials}
 
-\begin{frame}{What is a polynomial?}
+\begin{frame}[t]{What is a polynomial?}
     \begin{definition}
         A polynomial is a function $f(x)$ written in terms of a sum of nonnegative integer powers. It can be written as
         \[f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots +a_1x+a_0\]
@@ -62,7 +62,7 @@
     \]
 \end{frame}
 
-\begin{frame}{Roots}
+\begin{frame}[t]{Roots}
     Polynomials have interesting properties, such as their roots.
     
     \begin{definition}
@@ -75,7 +75,7 @@
     \[h(x)=x^2+x+67\]
 \end{frame}
 
-\begin{frame}{Finding Roots}
+\begin{frame}[t]{Finding Roots}
     A common method for finding roots is \textbf{factoring}. That is, some polynomials can be written as a product of terms involving their roots.
     \[
     x^2-3x+2=(x-1)(x-2)
@@ -94,7 +94,7 @@
 
 \section{Vieta's Formulae}
 
-\begin{frame}{Vieta's Formulae}
+\begin{frame}[t]{Vieta's Formulae}
     Take the following
     \[
     f(x)=x^2-11x+18
@@ -107,7 +107,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{Quadratics}
+\begin{frame}[t]{Quadratics}
     Now, look at the general quadratic case.
     \[
     f(x)=a(x-r_1)(x-r_2)=ax^2-a(r_1+r_2)x+ar_1r_2
@@ -120,7 +120,7 @@
     \end{theorem}
 \end{frame}
 
-\begin{frame}{Practice}
+\begin{frame}[t]{Practice}
     \begin{itemize}
         \item If the following \(f(x)\) has roots \(\alpha, \beta\), find \(\alpha+\beta\) and \(\alpha\beta\).
         \[f(x)=3x^2-18x+24\]
@@ -128,7 +128,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{The General Form of Vieta's}
+\begin{frame}[t]{The General Form of Vieta's}
     It turns out that this formula works in general for any polynomial. First, we need to define some terms:
     \begin{definition}[Elementary Symmetric Polynomials]
         The elementary symmetric polynomial $e_i$ is defined as
@@ -137,7 +137,7 @@
     \end{definition}
 \end{frame}
 
-\begin{frame}{The General Form of Vieta's (cont.)}
+\begin{frame}[t]{The General Form of Vieta's (cont.)}
     For example, we have
     \[
         \begin{aligned}
@@ -148,7 +148,7 @@
         \end{aligned}
         \]
 \end{frame}
-\begin{frame}{The General Form of Vieta's (cont. cont.)}
+\begin{frame}[t]{The General Form of Vieta's (cont. cont.)}
     Finally, we arrive at the result
     \begin{theorem}[Vieta's formulae]
         In a polynomial \[f(x)=a_nx^n+a_{n-1}x^{n-1}\cdots a_1x+a_0\] with roots $r_1,r_2,\cdots,r_n$, with elementary symmetric polynomials $e_1,e_2,\cdots,e_n$, we have that
@@ -156,7 +156,7 @@
     \end{theorem}
 \end{frame}
 \section{Problems}
-\begin{frame}{Problems}
+\begin{frame}[t]{Problems}
     \begin{enumerate}
         \item Let \(r_1, r_2\) be the roots of \(f(x)=x^2-5x+4\). Find \((r_1-r_2)^2\).
         \item \textit{Challenge Problem: } Let the function 
@@ -170,7 +170,7 @@
     \end{enumerate}
 \end{frame}
 
-% \begin{frame}{Lists and Numbering}
+% \begin{frame}[t]{Lists and Numbering}
 %   \begin{columns}
 %     \begin{column}{0.48\textwidth}
 %       Bulleted list:
@@ -201,7 +201,7 @@
 %   \end{columns}
 % \end{frame}
 
-% \begin{frame}{Tables}
+% \begin{frame}[t]{Tables}
 %   \begin{table}
 %     \centering
 %     \caption{Sample table with booktabs style}
@@ -224,7 +224,7 @@
 %   \end{block}
 % \end{frame}
 
-% \begin{frame}{Mathematical Equations}
+% \begin{frame}[t]{Mathematical Equations}
 %   The CleanEasy theme includes proper mathematical typesetting:
   
 %   \begin{align}
@@ -264,7 +264,7 @@
 %   \end{lstlisting}
 % \end{frame}
 
-% \begin{frame}{Figures and Graphics}
+% \begin{frame}[t]{Figures and Graphics}
 %   \begin{columns}
 %     \begin{column}{0.48\textwidth}
 %       \centering
@@ -294,7 +294,7 @@
 % \end{frame}
 
 % \section{Results}
-% \begin{frame}{Overlays and Animations}
+% \begin{frame}[t]{Overlays and Animations}
 %   Beamer supports step-by-step revelations:
   
 %   \begin{itemize}
@@ -316,7 +316,7 @@
 %   \end{block}
 % \end{frame}
 
-% \begin{frame}{Citations and References}
+% \begin{frame}[t]{Citations and References}
 %   CleanEasy works well with bibliographies and citations:
   
 %   \begin{block}{Sample citation}
@@ -336,7 +336,7 @@
 %   % \end{thebibliography}
 % \end{frame}
 
-% \begin{frame}{Custom TikZ Graphics}
+% \begin{frame}[t]{Custom TikZ Graphics}
 
 %   \begin{figure}
 %       \centering
@@ -364,7 +364,7 @@
 % \end{frame}
 
 % \section{Conclusions}
-% \begin{frame}{Theme Customization}
+% \begin{frame}[t]{Theme Customization}
 %   The CleanEasy theme can be easily customized:
   
 %   \begin{itemize}
@@ -379,7 +379,7 @@
 %   \end{alertblock}
 % \end{frame}
 
-% \begin{frame}{Final Thoughts}
+% \begin{frame}[t]{Final Thoughts}
 %   \begin{block}{Benefits of CleanEasy}
 %     \begin{itemize}
 %       \item Professional appearance suitable for academic and business contexts
@@ -396,7 +396,7 @@
 %   \end{center}
 % \end{frame}
 
-% \begin{frame}[plain]
+% \begin{frame}[t]
 %   \centering
 %   \Huge \textbf{Thank you!}
   
@@ -410,7 +410,7 @@
 % \end{frame}
 
 % Sample bibliography (not shown in presentation, just for reference)
-% \begin{frame}{References}
+% \begin{frame}[t]{References}
 %   \begin{thebibliography}{9}
 %     \bibitem{einstein1905}
 %       Albert Einstein.
@@ -424,7 +424,7 @@
 %   \end{thebibliography}
 % \end{frame}
 
-% \begin{frame}{References}
+% \begin{frame}[t]{References}
 %   \bibliography{reference.bib}
 %   \bibliographystyle{apalike}
 % \end{frame}
