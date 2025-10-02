@@ -62,29 +62,28 @@
 \end{frame}
 
 
-\section{Reminders (5 min)}
+\section{Reminders}
 
 \begin{frame}[t]{Upcoming Competitions and Events}
-    Please take note of the following:
+    Please \textit{\textbf{sign up}}!
     \vspace{0.2cm}
     \begin{enumerate}
-        \item Fill out interest form for GML (Georgia Math League)  % gauge how many papers we need to print out
+        \item Georgia Math League \# 1  % gauge how many papers we need to print out
         \begin{itemize}
-            \item First competition! Early October!
+            \item October 23!
         \end{itemize}
         \item UGA
         \begin{itemize}
-            \item October 25
+            \item October 25!
             \item In-person; Zell B. Miller Learning Center (right across nice dining hall)
         \end{itemize}
         \item KSU
         \begin{itemize}
-            \item October 29
+            \item October 29!
             \item At school
         \end{itemize}
         \item AMC 10/12
         \begin{itemize}
-            \item Sign up THIS WEEK! (early bird registration saves money!)
             \item A's on November 5, B's on November 13
         \end{itemize}
     \end{enumerate}
@@ -94,10 +93,19 @@
 
 \begin{frame}[t]{A classic problem}
     How many ways are there to arrange $n$ people in a row?
+\end{frame}
+
+\begin{frame}[t]{A classic problem}
+    How many ways are there to arrange $n$ people in a row?
+
+    \begin{itemize}
+        \item What counts as different arrangements? 
+        \item How do we count these?
+    \end{itemize}
     
-    \vspace{5cm}
+    \vspace{4cm}
     
-    This leads us to define a function called the permutation, one of the most fundamental operations in the subject of combinatorics.
+    This leads us to define the \textit{permutation}, one of the most fundamental operations in combinatorics.
 \end{frame}
 
 \begin{frame}[t]{Permutations}
@@ -107,10 +115,21 @@
         _nP_r=\frac{n!}{(n-r)!}=n\cdot(n-1)\cdots(n-r+2)\cdot(n-r+1)
     \]
     \end{definition}
-    We will use the permutation function if we need to place $n$ objects in $r$ spots and the order of the objects matters.
+    
     \vspace{1em}
     
-    For example, we need to figure out how many ways to place 5 people on the podium.
+    We will use this operation if we need to place $n$ distinct objects in $r$ spots and the order of the objects matters.
+\end{frame}
+
+\begin{frame}[t]{Permutations: An Example}
+    For example, how would we figure out how many ways there are to place 5 people on a podium?
+    
+\end{frame}
+
+\begin{frame}[t]{Permutations: An Example}
+    For example, how would we figure out how many ways there are to place 5 people on a podium?
+
+    \vspace{2cm}
     \begin{align*}
         _8P_3
         &=\frac{8!}{(8-3)!}\\
@@ -118,11 +137,20 @@
     \end{align*}
 \end{frame}
 \begin{frame}[t]{Quick Quiz}
-    How many ways are there to arrange the letters of the word?
-    \[VARUN\] \\
-    \vspace{1.5cm}
-    How about arranging 4 letters of the word?
-    \[PHEONIX\]
+    How many ways are there to arrange the letters of the following word?
+
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{VARUN}
+    \end{center}
+    
+    \vspace{1cm}
+    How about arranging 4 letters of this word?
+    
+    \vspace{0.5cm}
+    \begin{center}
+        \textit{PHOENIX}
+    \end{center}
 \end{frame}
 \begin{frame}[t]{What if...?}
     ... if the order didn't matter?
@@ -130,6 +158,18 @@
     \vspace{.5em}
     
     How many ways can we \textit{\textbf{pick}} 3 people out of 15 to form the presidential cabinet?
+\end{frame}
+
+\begin{frame}[t]{What if...?}
+    ... if the order didn't matter?
+    
+    \vspace{.5em}
+    
+    How many ways can we \textit{\textbf{pick}} 3 people out of 15 to form the presidential cabinet?
+
+    \vspace{1.5cm}
+
+    The distinction is very important to know: it will aid in determining what type of problem you are trying to solve, which is then useful once you are familiar with different types of problems (which there aren't really that many of when you begin).
 \end{frame}
 
 \begin{frame}[t]{Another important function: Combination}
@@ -142,7 +182,7 @@
     
     \vspace{2cm}
     
-    For example, if we want to choose $6$ slices out of the total $7$ of spaghetti that Sreyas Sabbani sliced, we employ the use of the choose function $\binom 76=\frac{7!}{6!1!}=7$ ways.
+    For example, if we want to choose $6$ slices out of the total $7$ of spaghetti that Sreyas Sabbani sliced, we employ the combination $\binom 76=\frac{7!}{6!1!}=7$ ways.
 \end{frame}
 
 \begin{frame}[t]{Quicker Quiz}
